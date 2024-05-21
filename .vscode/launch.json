@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildapi",            
-            "program": "${workspaceFolder}/src/Template.Api/bin/Debug/net6.0/Template.Api.dll",
+            "program": "${workspaceFolder}/src/Template.Api/bin/Debug/net8.0/Template.Api.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src/Template.Api",
             "stopAtEntry": false,
