@@ -1,2 +1,2 @@
-# arq-template-net8
+# arq-template-net6
 
