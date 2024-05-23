@@ -6,9 +6,9 @@
 
 	<ItemGroup>
     <PackageReference Include="MediatR" Version="12.2.0" />
-    <PackageReference Include="jwtmanager" Version="2.0.1" />
-    <PackageReference Include="jwtmiddleware" Version="2.0.1" />
-    <PackageReference Include="logmanager" Version="1.3.5" />
+    <PackageReference Include="jwtmanager" Version="2.1.0" />
+    <PackageReference Include="jwtmiddleware" Version="2.1.0" />
+    <PackageReference Include="logmanager" Version="1.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
   </ItemGroup>
