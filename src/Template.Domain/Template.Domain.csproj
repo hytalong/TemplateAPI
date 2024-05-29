@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="8.0.3" />
-    <PackageReference Include="DataAccess" Version="1.5.2" />
+    <PackageReference Include="DataAccess" Version="1.5.3" />
   </ItemGroup>
 
 </Project>
