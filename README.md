@@ -88,7 +88,7 @@ Aqui se inicia o template em branco. Evite de re-digitar muitas informações, faç
 
 
 ### Built With
-* [![.net][dotnet.microsoft.com]][.net-url]
+* [![Net][Net.cs]][Net-url]
 
 Abaixo somente exemplos
 * [![Next][Next.js]][Next-url]
@@ -263,5 +263,5 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-[.net]: https://img.shields.io/badge/.net-512bd4?style=for-the-badge&logo=.net&logoColor=white
-[.net-url]: https://dotnet.microsoft.com/pt-br/
+[Net.cs]: https://img.shields.io/badge/.net-512bd4?style=for-the-badge&logo=.net&logoColor=white
+[Net-url]: https://dotnet.microsoft.com/download/dotnet/8.0
