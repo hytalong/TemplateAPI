@@ -20,8 +20,6 @@
 [![project_license][license-shield]][license-url]
 
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -80,7 +78,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Aqui se inicia o template em branco. Evite de re-digitar muitas informações, faça uma busca e valide em seu editor: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+Aqui se inicia o template em branco. Evite de re-digitar muitas informações, faça uma busca e valide em seu editor: `github_username`, `repo_name`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
 
 
 <p align="right">(<a href="#readme-top">devolta ao topo</a>)</p>
@@ -89,16 +87,6 @@ Aqui se inicia o template em branco. Evite de re-digitar muitas informações, faç
 
 ### Built With
 * [![Net][Net.cs]][Net-url]
-
-Abaixo somente exemplos
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">devolta ao topo</a>)</p>
 
@@ -121,28 +109,20 @@ Para conseguir executar localmente uma copia do projeto executando os passos de 
 4. Atualizar o campo Name para "Crefisa"
 5. Incluir o caminho do Source "https://atf.local/artifactory/api/nuget/v3/nuget-virtual/index.json"
 
-Este é um exemplo de como listar as coisas que você precisa para usar o software e como instalá-las.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Instalação
 
-1. Get a free API Key at [https://example.com](https://example.com)
+## Exemplo de API
+1. Executar em prompt de comando:
+  git config --system http.sslbackend schannel
+
 2. Clone the repo
    ```sh
    git clone https://github.com/github_username/repo_name.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+
+3. Valide as informações de ambiente local `..\arq-template-net8\src\Template.Api\appsettings.Development.json`
+
+4. Altere o git remote url para evitar pushes acidentais para o projeto base
    ```sh
    git remote set-url origin github_username/repo_name
    git remote -v # confirm the changes
@@ -200,29 +180,22 @@ Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
 </a>
 
 
-
-<!-- LICENSE -->
-## licença
-
-Distribuído sob o project_license. Consulte `LICENSE.txt` para obter mais informações.
-
 <p align="right">(<a href="#readme-top">devolta ao topo</a>)</p>
 
 
-
 <!-- CONTACT -->
-## Contact
+## Contatos
 
-Your Name - email@email_client.com
+Seu Nome - email@email_client.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Link do Projeto: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
 <p align="right">(<a href="#readme-top">devolta ao topo</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## agradecimentos
+## Agradecimentos
 
 * []()
 * []()
