@@ -6,6 +6,7 @@ using LogManager.Domain;
 using MediatR;
 using Template.Domain.Entidades;
 using Template.Domain.Repositorios;
+using System.Security.Cryptography;
 
 namespace Template.Application.Querys.LastWeatherForecast
 {
@@ -29,7 +30,7 @@ namespace Template.Application.Querys.LastWeatherForecast
 
         public async Task<LastWeatherForecastResponse> Handle(LastWeatherForecastRequest request, CancellationToken cancellationToken)
         {
-            var rng = new Random();
+            //var rng = new Random();
             Logger.Information("Starting Handle request");
             
             var response = new LastWeatherForecastResponse()

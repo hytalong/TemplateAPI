@@ -5,8 +5,8 @@
 *** please share with the architecture team, let keep improving!
 -->
 
-
-
+![Static Badge](https://img.shields.io/badge/version-1.0.0.3-blue)
+[![Quality Gate Status](https://sonar.local/api/project_badges/measure?project=arq-template-net8&metric=alert_status&token=sqb_96ac869e240da44ad9dba25463bcf4057a0c7d32)](https://sonar.local/dashboard?id=arq-template-net8)
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -15,22 +15,19 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.ipTKSNS-HyfjhKF0m0p5BQHaHa?w=169&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">titulo_projeto</h3>
+<h3 align="center">Template de projeto .net 8</h3>
 
   <p align="center">
-    project_description
+    Exemplo de projeto .net 8 conectado a banco de dados com API e swagger.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore os documentos »</strong></a>
     <br />
@@ -76,7 +73,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![API Swagger][product-screenshot]](https://example.com)
 
 Aqui se inicia o template em branco. Evite de re-digitar muitas informações, faça uma busca e valide em seu editor: `github_username`, `repo_name`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
 
@@ -86,7 +83,7 @@ Aqui se inicia o template em branco. Evite de re-digitar muitas informações, faç
 
 
 ### Built With
-* [![Net][Net.cs]][Net-url]
+[![Net][Net.cs]][Net-url]
 
 <p align="right">(<a href="#readme-top">devolta ao topo</a>)</p>
 
@@ -160,10 +157,9 @@ Olhe para [open issues](https://github.com/github_username/repo_name/issues) par
 <!-- CONTRIBUTING -->
 ## Contribuindo
 
-As contribuições são o que tornam a comunidade de código aberto um lugar incrível para aprender, inspirar e criar. Quaisquer contribuições que você fizer são **muito apreciadas**.
+As contribuições são o que tornam a Crefisa um lugar incrível para aprender, inspirar e criar. Quaisquer contribuições que você fizer são **muito apreciadas**.
 
 Se você tiver uma sugestão que melhore isso, faça um fork do repositório e crie uma solicitação pull. Você também pode simplesmente abrir um problema com a tag "aprimoramento".
-Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
 
 1. Bifurque o projeto
 2. Crie seu branch de recursos (`git checkout -b feature/AmazingFeature`)
@@ -219,7 +215,7 @@ Link do Projeto: [https://github.com/github_username/repo_name](https://github.c
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
