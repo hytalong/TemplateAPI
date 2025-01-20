@@ -23,7 +23,10 @@ namespace Template.Batch.Commands
             var request = new LastWeatherForecastRequest() { };
             var response = await Mediator.Send(request);
             Logger.Information<LastWeatherForecastResponse>("Response: {@Response}", response);
+            // NOSONAR
             Console.WriteLine("Response: {@Response}", response);
+
+
         }
     }
 

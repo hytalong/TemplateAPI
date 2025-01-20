@@ -29,7 +29,7 @@ namespace Template.Application.Querys.Quotes
 
         public async Task<QuoteResponse> Handle(QuoteRequest request, CancellationToken cancellationToken)
         {
-            var rng = new Random();
+            //var rng = new Random();
             Logger.Information("Starting Handle request");
             
             var response = new QuoteResponse()
