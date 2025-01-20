@@ -30,7 +30,7 @@ namespace Template.Infrastructure.Oracle
 
         public List<WeatherForecast> Find()
         {
-            var rng = new Random();
+            //var rng = new Random();
 
             Logger.Information("Getting last five wheather forecast");
             this.ExemploTransaction();
