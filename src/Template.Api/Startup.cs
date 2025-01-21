@@ -29,18 +29,20 @@ namespace Template.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient();
-            services.AddControllers();            
+            services.AddControllers();
             services.AddLogger(Configuration);
             services.AddLogHttp(Configuration);
             services.AddMediator();
             services.AddRepository(Configuration);
+            services.AddRedis(Configuration);
             services.AddJWTManager(Configuration).AddAuthenticationService();
             services.AddHealthChecksInjection();
             services.AddScoped<HttpIntercepter>();
             services.AddHttpContextAccessor();
             services.ConfigureAll<HttpClientFactoryOptions>(options =>
             {
-                options.HttpMessageHandlerBuilderActions.Add(builder => {
+                options.HttpMessageHandlerBuilderActions.Add(builder =>
+                {
                     builder.AdditionalHandlers.Add(builder.Services.GetRequiredService<HttpIntercepter>());
                 });
             });
@@ -74,16 +76,16 @@ namespace Template.Api
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {{
-                    new OpenApiSecurityScheme
-                    {
-                        Reference = new OpenApiReference
+                        new OpenApiSecurityScheme
                         {
-                            Type = ReferenceType.SecurityScheme,
-                            Id = "Bearer"
-                        }
-                    },
-                    Array.Empty<string>()
-                }});
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }});
             });
         }
 
@@ -100,7 +102,7 @@ namespace Template.Api
                     options.RoutePrefix = "swagger";
                 });
             }
-            
+
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseJWTManager();
