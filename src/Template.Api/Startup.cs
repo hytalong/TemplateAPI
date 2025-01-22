@@ -15,6 +15,10 @@ using System.IO;
 using System.Text;
 using System.Text.Json;
 using Template.CrossCutting.InjecaoDependencia;
+using Http.ResilientClient;
+using Http.ResilientClient.Extensions;
+using MySqlX.XDevAPI;
+using System.Xml;
 
 namespace Template.Api
 {
@@ -28,7 +32,8 @@ namespace Template.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient();
+            services.AddResilientHttpClient("ResilientHttpClient", Configuration);
+
             services.AddControllers();
             services.AddLogger(Configuration);
             services.AddLogHttp(Configuration);
@@ -76,16 +81,16 @@ namespace Template.Api
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {{
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
+                            new OpenApiSecurityScheme
                             {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            }
-                        },
-                        Array.Empty<string>()
-                    }});
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                                }
+                            },
+                            Array.Empty<string>()
+                        }});
             });
         }
 

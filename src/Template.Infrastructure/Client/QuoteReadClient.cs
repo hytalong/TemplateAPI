@@ -12,12 +12,12 @@ namespace Template.Infrastructure.Client
 {
     public class QuoteReadClient : IQuoteReadRepository
     {
-        private IHttpClientFactory HttpClientFactory { get; }
+        private readonly HttpClient _httpClient;
         protected readonly ILogger Logger;
 
         public QuoteReadClient(IHttpClientFactory httpClientFactory, ILogger logger)
         {
-            HttpClientFactory = httpClientFactory;
+            _httpClient = httpClientFactory.CreateClient("ResilientClient");
             Logger = logger;
         }
 
@@ -25,15 +25,11 @@ namespace Template.Infrastructure.Client
         {
             Logger.Information("Starting client find");
 
-            var request = new HttpRequestMessage(HttpMethod.Get,
-            "https://economia.awesomeapi.com.br/last/" + coins);
-
-
-            var client = HttpClientFactory.CreateClient();
+            var url = $"https://economia.awesomeapi.com.br/last/{coins}";
 
             try
             {
-                var response = await client.SendAsync(request);
+                var response = await _httpClient.GetAsync(url);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -42,12 +38,13 @@ namespace Template.Infrastructure.Client
                 }
                 else
                 {
+                    Logger.Information("Response unsuccessful with status code: {StatusCode}", response.StatusCode);
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                Logger.Information("Finish client find with error: @ex.Message", ex.Message);
+                Logger.Error("Client find encountered an error: {Message}", ex.Message);
                 throw;
             }
         }
