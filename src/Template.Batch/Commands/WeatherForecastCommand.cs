@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Template.Application.Querys.LastWeatherForecast;
 using McMaster.Extensions.CommandLineUtils;
 using System;
-using LogManager.Domain;
+using Serilog;
 
 namespace Template.Batch.Commands
 {
