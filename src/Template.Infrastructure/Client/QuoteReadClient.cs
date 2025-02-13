@@ -5,7 +5,7 @@ using Template.Domain.Entidades;
 using Template.Domain.Repositorios;
 using System.Text.Json.Serialization;
 using System.Text.Json;
-using LogManager.Domain;
+using Serilog;
 using System;
 
 namespace Template.Infrastructure.Client

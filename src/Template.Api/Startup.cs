@@ -1,6 +1,5 @@
 using JWTManager.JWTMiddleware;
-using LogManager.Extension;
-using LogManager.Handlers;
+using Serilog;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -17,8 +16,7 @@ using System.Text.Json;
 using Template.CrossCutting.InjecaoDependencia;
 using Http.ResilientClient;
 using Http.ResilientClient.Extensions;
-using MySqlX.XDevAPI;
-using System.Xml;
+using Http.ResilientClient.Options;
 
 namespace Template.Api
 {
@@ -32,14 +30,13 @@ namespace Template.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddResilientHttpClient("ResilientHttpClient", Configuration);
 
+            services.AddHttpClient();
             services.AddControllers();
             services.AddLogger(Configuration);
             services.AddLogHttp(Configuration);
             services.AddMediator();
             services.AddRepository(Configuration);
-            services.AddRedis(Configuration);
             services.AddJWTManager(Configuration).AddAuthenticationService();
             services.AddHealthChecksInjection();
             services.AddScoped<HttpIntercepter>();
@@ -58,16 +55,16 @@ namespace Template.Api
                     Version = "v1",
                     Title = "API Template",
                     Description = "An ASP.NET Core Web API for managing ToDo items",
-                    TermsOfService = new Uri("https://example.com/terms"),
+                    TermsOfService = new Uri(Configuration["Swagger:TermsOfServiceUrl"]),
                     Contact = new OpenApiContact
                     {
                         Name = "Example Contact",
-                        Url = new Uri("https://example.com/contact")
+                        Url = new Uri(Configuration["Swagger:ContactUrl"])
                     },
                     License = new OpenApiLicense
                     {
                         Name = "Example License",
-                        Url = new Uri("https://example.com/license")
+                        Url = new Uri(Configuration["Swagger:LicenseUrl"])
                     }
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -81,16 +78,16 @@ namespace Template.Api
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {{
-                            new OpenApiSecurityScheme
-                            {
-                                Reference = new OpenApiReference
+                                new OpenApiSecurityScheme
                                 {
-                                    Type = ReferenceType.SecurityScheme,
-                                    Id = "Bearer"
-                                }
-                            },
-                            Array.Empty<string>()
-                        }});
+                                    Reference = new OpenApiReference
+                                    {
+                                        Type = ReferenceType.SecurityScheme,
+                                        Id = "Bearer"
+                                    }
+                                },
+                                Array.Empty<string>()
+                            }});
             });
         }
 
@@ -111,8 +108,6 @@ namespace Template.Api
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseJWTManager();
-            app.UseLogHttp();
-            app.UseLogErrorGlobal();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

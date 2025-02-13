@@ -11,8 +11,8 @@
     <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="jwtmanager" Version="2.1.0" />
     <PackageReference Include="jwtmiddleware" Version="2.1.0" />
-    <PackageReference Include="logmanager" Version="1.4.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
     <PackageReference Include="System.Formats.Asn1" Version="8.0.1" />

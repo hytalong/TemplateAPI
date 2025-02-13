@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using DataAccess.Domain;
-using LogManager.Domain;
+using Serilog;
 using Template.Domain.Entidades;
 using Template.Domain.Repositorios;
 using Template.Infrastructure.Redis;
