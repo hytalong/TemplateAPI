@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.UnitTest", "test\u
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Batch", "src\Template.Batch\Template.Batch.csproj", "{C5220A97-3C38-4F98-A970-6DCA8ED2A0ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Worker", "Template.Worker\Template.Worker.csproj", "{655148D8-14AF-43AC-B073-BB5533CA06FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Worker", "src\Template.Worker\Template.Worker.csproj", "{655148D8-14AF-43AC-B073-BB5533CA06FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
