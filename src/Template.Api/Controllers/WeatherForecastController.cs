@@ -2,7 +2,7 @@
 using MediatR;
 using System.Threading.Tasks;
 using Template.Application.Querys.LastWeatherForecast;
-using LogManager.Domain;
+using Serilog;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Template.Api.Controllers

@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using LogManager.Domain;
+using Serilog;
 using MediatR;
 using Template.Domain.Entidades;
 using Template.Domain.Repositorios;

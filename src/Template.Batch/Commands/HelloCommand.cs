@@ -1,4 +1,4 @@
-﻿using LogManager.Domain;
+﻿using Serilog;
 using McMaster.Extensions.CommandLineUtils;
 using MediatR;
 using System;

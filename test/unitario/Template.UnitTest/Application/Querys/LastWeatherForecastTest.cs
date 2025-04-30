@@ -8,7 +8,7 @@ using Template.Application.Querys.LastWeatherForecast;
 
 using System.Threading;
 using System.Threading.Tasks;
-using LogManager.Domain;
+using Serilog;
 
 namespace Template.UnitTest.Application.Querys
 {

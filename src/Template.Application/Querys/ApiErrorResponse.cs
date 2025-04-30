@@ -1,5 +1,4 @@
 using System;
-using Microsoft.AspNetCore.Http;
 
 namespace Template.Application.Querys.LastWeatherForecast
 {
