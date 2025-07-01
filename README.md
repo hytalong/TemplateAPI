@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="https://tse3.mm.bing.net/th/id/OIP.ipTKSNS-HyfjhKF0m0p5BQHaHa?w=169&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Logo" width="80" height="80">
+    
   </a>
 
 <h3 align="center">Template de projeto .NET 8</h3>
